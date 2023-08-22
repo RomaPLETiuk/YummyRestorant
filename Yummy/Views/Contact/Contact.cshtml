@@ -1,0 +1,88 @@
+﻿@model Yummy.Models.Contact
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>Контакт</h2>
+            <p>Потрібна допомога? <span>Зв'яжіться з нами</span></p>
+        </div>
+
+        <div class="mb-3">
+           @* <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>*@
+            <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d483.8100239843798!2d25.5112571866327!3d49.999159590351965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472fe6107e4cf829%3A0xc62e7c26a87578b5!2sPizza%20Roma!5e0!3m2!1sru!2sua!4v1690803765519!5m2!1sru!2sua" frameborder="0" allowfullscreen></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+            <div class="col-md-6">
+                <div class="info-item  d-flex align-items-center">
+                    <i class="icon bi bi-map flex-shrink-0"></i>
+                    <div>
+                        <h3>Наш адрес</h3>
+                        <p>Місто Київ, вул. Ломоносова 67</p>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+                <div class="info-item d-flex align-items-center">
+                    <i class="icon bi bi-envelope flex-shrink-0"></i>
+                    <div>
+                        <h3>Зв'яжіться з нами</h3>
+                        <p>contact@nubip.com</p>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+                <div class="info-item  d-flex align-items-center">
+                    <i class="icon bi bi-telephone flex-shrink-0"></i>
+                    <div>
+                        <h3>Звяжіться з нами</h3>
+                        <p>+380 68 057 2712</p>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+                <div class="info-item  d-flex align-items-center">
+                    <i class="icon bi bi-share flex-shrink-0"></i>
+                    <div>
+                        <h3>Ми відкриті</h3>
+                        <div>
+                            <strong>Щодня:</strong> 10:00 - 23:00;
+                            @*<strong>Sunday:</strong> Closed*@
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+        </div>
+
+        <form method="POST" asp-area="" asp-controller="Contact" asp-action="Contact" role="form" class="php-email-form p-3 p-md-4">
+            <div class="row">
+                <div class="col-xl-6 form-group">
+                    <input type="text" asp-for="Name" class="form-control" id="name" placeholder="Ваше ім'я" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                    <input type="email" class="form-control" asp-for="Email" id="email" placeholder="Пошта" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" asp-for="Subject" id="subject" placeholder="Тема" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" asp-for="Message" rows="5" placeholder="Повідомлення" required></textarea>
+            </div>
+            <div class="my-3">
+                <div class="loading">Загрузка</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Ваше повідомлення надіслано. Дякуємо!</div>
+            </div>
+            <div class="text-center"><button type="submit">Надіслати</button></div>
+        </form>
+        <!--End Contact Form -->
+
+    </div>
+</section><!-- End Contact Section -->

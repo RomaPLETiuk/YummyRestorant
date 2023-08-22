@@ -1,0 +1,46 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">Під час обробки вашого запиту виникла помилка.</h2>
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>ID запиту:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Режим розробки</h3>
+<p>
+    Переключення в <strong>режим розробки</strong> відобразить більше деталей про помилку, що сталася.
+</p>
+<p>
+    <strong>Режим розробки не повинен бути активований для розгорнутих додатків.</strong>
+    Це може призвести до відображення чутливої інформації з винятків для кінцевих користувачів.
+    Для локального відлагодження, активуйте <strong>режим розробки</strong>, встановивши змінну оточення <strong>ASPNETCORE_ENVIRONMENT</strong> у значення <strong>Development</strong>
+    і перезапустіть додаток.
+</p>
+
+
+@*<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Development Mode</h3>
+<p>
+    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+</p>
+<p>
+    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+    It can result in displaying sensitive information from exceptions to end users.
+    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
+    and restarting the app.
+</p>
+*@
