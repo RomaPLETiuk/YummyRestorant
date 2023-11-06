@@ -22,7 +22,7 @@ namespace Yummy.Areas.Admin.Controllers
             var eventsCount = ListOfEvent.Count;
             var ListOfChefs = await _userManager.Users.Where(x => x.userType == UserType.Chef).ToListAsync();
             var chefsCount = ListOfChefs.Count;
-            var admin = await _userManager.FindByEmailAsync("mahmoud@admin.com");
+            var admin = await _userManager.FindByEmailAsync("Roma@admin.com");
             ViewBag.TotalEvents = eventsCount;
             ViewBag.TotalChefs = chefsCount;
             return View(admin);

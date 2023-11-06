@@ -38,12 +38,12 @@ namespace Yummy.Data
             var adminUser = new ApplicationUser
             {
                 Id = Admin_User_Id,
-                FirstName = "Mahmoud",
-                LastName = "Sameer",
-                Email = "mahmoud@admin.com",
-                NormalizedEmail = "MAHMOUD@ADMIN.COM",
+                FirstName = "Roman",
+                LastName = "Pletiuk",
+                Email = "roma@admin.com",
+                NormalizedEmail = "ROMA@GMAIL.COM",
                 userType = UserType.Administrator,
-                UserName = "Mahmoud_Sameer",
+                UserName = "roma_pletiuk",
                 ImageName = "ma.jpg"
                 
             };
